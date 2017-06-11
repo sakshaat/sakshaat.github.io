@@ -20,10 +20,11 @@
 
     <!-- Following Menu -->
     <div class="ui large top inverted fixed hidden menu">
-        <div class="ui container right">
-            <a class="active item">Home</a>
-            <a class="item">Work</a>
-            <a class="item">Projects</a>
+        <div id="follow-menu" class="ui container right">
+            <a class="active item" href="#">Home</a>
+            <a class="item" href="#education">Education</a>
+            <a class="item" href="#work">Work</a>
+            <a class="item" href="#projects">Projects</a>
         </div>
     </div>
 
@@ -38,12 +39,13 @@
     <!-- Page Contents -->
     <div class="pusher">
         <div class="ui inverted masthead center aligned segment">
+            <div class="parallax-window" data-parallax="scroll" data-image-src="assets/header-background-2.jpg"></div>
             <div id="nav" class="ui container">
-                <div class="ui inverted secondary pointing menu">
-                    <a class="active blue item left">Home</a>
-                    <a class="item blue left">Education</a>
-                    <a class="item blue left">Work</a>
-                    <a class="item blue left">Projects</a>
+                <div id="main-menu" class="ui inverted secondary pointing menu">
+                    <a class="active blue item left" href="#">Home</a>
+                    <a class="item blue left" href="#education">Education</a>
+                    <a class="item blue left" href="#work">Work</a>
+                    <a class="item blue left" href="#projects">Projects</a>
                     <a class="item blue right toc">
                         <i class="sidebar icon"></i>
                     </a>
@@ -51,7 +53,8 @@
             </div>
 
             <div class="ui container header">
-                <img id="profile" class="ui medium circular image centered" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAcZAAAAJGU2N2M0ODNlLTgxY2EtNGU3MC1hZWU2LWNhNzA2MDhkY2MwYQ.jpg" />
+
+                <img id="profile" class="ui medium circular image centered" src="assets/profile.jpg" />
                 <h1 class="ui inverted header">
                     Sakshaat Choyikandi
                 </h1>
@@ -62,22 +65,110 @@
                 </div>
             </div>
         </div>
-        <div id="education" class="ui grid segment">
+        <div id="about-me" class="ui centered grid segment main-section">
+            <h1>What I do</h1>
+            <p>I am an extremely self-driven and creative Software Developer with a natural curiousity for learning. I have used my background in Computer Science to develop numerous <a href="#education">academic</a>,
+                <a href="#work">professional</a> and side-<a href="#projects">projects</a>. I also have a strong drive to innovate and create products that I find useful which I believe other people may appreciate as well. I also enjoy other activities
+                such as making <a href="http://soundcloud.com/sadici">Hip-Hop music</a>, Mixed Martial Arts and playing basketball!
+            </p>
+            <div class="ui five doubling cards">
+                <div class="skills ui raised card">
+                    <div class="header centered">
+                        <i class="big terminal icon"></i>
+                    </div>
+                    <div class="ui basic segment">
+                        <div class="ui list">
+                            <div class="item">Python</div>
+                            <div class="item">Java</div>
+                            <div class="item">C</div>
+                            <div class="item">JavaScript</div>
+                            <div class="item">PHP</div>
+                            <div class="item">Bash</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills ui raised card">
+                    <div class="header centered">
+                        <i class="big server icon"></i>
+                    </div>
+                    <div class="ui basic segment">
+                        <div class="ui list">
+                            <div class="item">Node.js</div>
+                            <div class="item">Express.js</div>
+                            <div class="item">Flask</div>
+                            <div class="item">Django</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills ui raised card">
+                    <div class="header centered">
+                        <i class="big wizard icon"></i>
+                    </div>
+
+                    <div class="ui basic segment">
+                        <div class="ui list">
+                            <div class="item">HTML5</div>
+                            <div class="item">SASS</div>
+                            <div class="item">JQuery</div>
+                            <div class="item">React.js</div>
+                            <div class="item">Bootstrap</div>
+                            <div class="item">Adobe Photoshop</div>
+                            <div class="item">Final Cut Pro</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills ui raised card">
+                    <div class="header centered">
+                        <i class="big database icon"></i>
+                    </div>
+
+                    <div class="ui basic segment">
+                        <div class="ui list">
+                            <div class="item">MySQL</div>
+                            <div class="item">PostgresSQL</div>
+                            <div class="item">JSON</div>
+                            <div class="item">MongoDB</div>
+                            <div class="item">XML</div>
+                            <div class="item">XQuery</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills ui raised card">
+                    <div class="header centered">
+                        <i class="big cloud icon"></i>
+                    </div>
+
+                    <div class="ui basic segment">
+                        <div class="ui list">
+                            <div class="item">Amazon Web Services</div>
+                            <div class="item">Microsoft Azure</div>
+                            <div class="item">Heroku</div>
+                            <div class="item">Docker</div>
+                            <div class="item">CircleCI</div>
+                            <div class="item">ZenHub</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="education" class="ui grid segment main-section">
+            <h1>Education</h1>
             <div class="logo ui grid eight wide column">
                 <div class="row"></div>
                 <div class="row">
-                    <img class="ui medium image centered circular uoft-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Utoronto_coa.svg/1024px-Utoronto_coa.svg.png" alt="UOFT-LOGO" />
+                    <img class="ui medium image centered circular logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Utoronto_coa.svg/1024px-Utoronto_coa.svg.png" alt="UOFT-LOGO" />
                 </div>
                 <div class="row centered">
                     <h1> University of Toronto </h1>
                     <h3> September 2014 - Present </h3>
                 </div>
             </div>
-            <div class="ui grid wide column">
+            <div class="ui grid two wide column">
             </div>
             <div class="ui grid six wide column">
                 <p>
-                    I am currently recieving a specialist degree in Computer Science at the <b>University of Toronto</b>, specializing in Software Engineering.
+                    I am currently working towards receiving a specialist degree in <b>Computer Science</b> at the <b>University of Toronto</b>, specializing in <b>Software Engineering</b>.
                 </p>
                 <h3>Relevant Courses:</h3>
                 <div class="ui courses segment">
@@ -135,53 +226,162 @@
             </div>
         </div>
 
-
-        <div class="ui grid vertical stripe segment">
-            <div class="ui middle aligned stackable grid">
-                <div class="row ">
-                    <div class="eight wide column">
-                        <h3 class="ui header ">We Help Companies and Companions</h3>
-                        <p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.</p>
-                        <h3 class="ui header ">We Make Bananas That Can Dance</h3>
-                        <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.</p>
-                    </div>
-                    <div class="six wide right floated column ">
-                        <img src=" " alt="pic " class="ui large bordered rounded image ">
+        <div id="work" class="ui stackable grid segment main-section">
+            <h1>Work Experience</h1>
+            <div class="row">
+                <div class="ui grid four wide column">
+                    <div class="row">
+                        <img class="ui medium image centered logo" src="assets/ECCC-logo.jpg" alt="ECCC-LOGO" />
                     </div>
                 </div>
-                <div class="row ">
-                    <div class="center aligned column ">
-                        <a class="ui huge button ">Check Them Out</a>
+                <div class="ui grid eight wide column">
+                    <h2>Environment and Climate Change Canada</h2>
+                    <h3>Remote Sensing Research Assistant (Co-op)</h3>
+                    <h4>September 2016 - December 2016</h4>
+                    <p>Developed web applications for a research project writing, documenting and maintaining thousands of lines of Shell and Python scripts used by scientists researching ways to accurately predict aircraft icing incidents</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="ui grid four wide column">
+                    <div class="row">
+                        <img class="ui medium image centered logo" src="assets/saksham-logo.png" alt="Saksham-LOGO" />
                     </div>
+                </div>
+                <div class="ui grid eight wide column">
+                    <h2>Saksham Entertainment</h2>
+                    <h3>Assistant Event Manager</h3>
+                    <h4>March 2014 – July 2014</h4>
+                    <p>Designed, implemented, deployed and maintained the company’s website under a very tight deadline to ensure uninterrupted access of the promotional material. Maintained great relationships with the artists, sound crew and the guests
+                        to ensure smooth running of events hosted by the company.</p>
                 </div>
             </div>
         </div>
 
-        <div class="ui stripe segment">
-            <div class="ui container">
-                <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-                <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
-                <a class="ui large button">Read More</a>
-                <h4 class="ui horizontal header divider">
-                    <a href="#">Case Studies</a>
-                </h4>
-                <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
-                <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
-                <a class="ui large button">I'm Still Quite Interested</a>
+
+        <div id="projects" class="ui grid segment main-section">
+            <h1>Projects</h1>
+            <div class="ui six stackable cards">
+                <div class="ui raised green card">
+                    <div class="content">
+                        <div class="header">NoClick</div>
+                        <div class="meta">
+                            <span class="category">Python, JavaScript, CircleCI, Docker, AWS</span>
+                        </div>
+                        <div class="description">
+                            <p>A Google Chrome extension that finds the purpose of a click-bait article without having to open it by using open source Python text summarization library, sumy. </p>
+                            <p>Also gained experience with creating a continuous delivery pipeline using GitHub, CircleCI, Docker and AWS for Agile development. </p>
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <div class="right floated author">
+                            <a href="http://www.github.com/sakshaat/NoClick"><i class="big github icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui raised red card">
+                    <div class="content">
+                        <div class="header">RRobin</div>
+                        <div class="meta">
+                            <span class="category">JavaScript, React-Native</span>
+                        </div>
+                        <div class="description">
+                            <p>An iOS/Android Productivity application built in React-Native to track how the user spends the majority of their time by using Operating System job scheduling principles.</p>
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <div class="right floated author">
+                            <a href="http://www.github.com/sakshaat/RRobin"><i class="big github icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui raised blue card">
+                    <div class="content">
+                        <div class="header">HackerBot</div>
+                        <div class="meta">
+                            <span class="category">JavaScript, Node.js, Python, Shell, Microsoft Azure</span>
+                        </div>
+                        <div class="description">
+                            <p>A Microsoft Bot Framework based Facebook Bot which lets a user control their computer through saved bash commands directly from Facebook Messenger.</p>
+                            <p>Continuously Integrated with Microsoft Azure Bot Service for Agile development.</p>
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <div class="right floated author">
+                            <a href="http://www.github.com/sakshaat/hackerbot"><i class="big github icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui raised orange card">
+                    <div class="content">
+                        <div class="header">CryptoWealth</div>
+                        <div class="meta">
+                            <span class="category">JavaScript, Python, HTML5, SASS, React.js, Django, Heroku</span>
+                        </div>
+                        <div class="description">
+                            <p>As part of an Agile team of five, developed a cryptocurrency advisory web application that analyzes cryptocurrencies to advice users to make sound investment decisions while navigating the complex landscape of the cryptocurrency
+                                market.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <div class="right floated author">
+                            <a href="https://github.com/shaynair/CryptoWealth"><i class="big github icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui raised purple card">
+                    <div class="content">
+                        <div class="header">System Call Hijacker</div>
+                        <div class="meta">
+                            <span class="category">C</span>
+                        </div>
+                        <div class="description">
+                            <p>A Linux kernel module written in C that can hijack specific system calls from the system calls table and log a message every time a hijacked system call is called. </p>
+                            <p>I developed this as part of my evaluation for CSC369 at University of Toronto achieving a score of 98% on the assignment.</p>
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <div class="right floated author">
+                            <a href="https://github.com/sakshaat/CSC369-A1"><i class="big github icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui raised teal card">
+                    <div class="content">
+                        <div class="header">Trip Planner</div>
+                        <div class="meta">
+                            <span class="category">Java, Android, Android Studio</span>
+                        </div>
+                        <div class="description">
+                            <p>An Android travel application as part of my evaluation for CSCB07 to find and sort the best itineraries from a large list of flights based on user input while providing a creative and intuitive user experience.</p>
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <div class="right floated author">
+                            <a href="https://github.com/sakshaat/TripPlanner"><i class="big github icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+
         </div>
 
-        <div id="recommendation" class="ui vertical stripe quote segment ">
+
+        <div id="recommendation" class="ui vertical stripe quote segment main-section">
+            <h1>Recommendations</h1>
             <div class="ui equal width stackable internally celled grid ">
                 <div class="center aligned row ">
                     <div class="column">
-                        <p><i class="fa fa-quote-left fa-pull-left" aria-hidden="true"></i>Sakshaat worked as a Co-Op student under my supervision and it was fun working with him. He is a <b> very good computer programmer and has excellent problem solving skills</b>.
+                        <p><i class="fa fa-quote-left fa-pull-left" aria-hidden="true"></i>Sakshaat worked as a co-op student under my supervision and it was fun working with him. He is a <b> very good computer programmer and has excellent problem solving skills</b>.
                             In the short period that he worked in our institution, he has achieved a lot including developing web based weather nowcasting products and ground based remote sensing data collection and archiving systems. <i class="fa fa-quote-right fa-pull-right"
                                 aria-hidden="true"></i></p>
                         <p>
                             <hr>
                             <a href="https://www.linkedin.com/in/faisal-boudala-65aa1917/">
-                                <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAYZAAAAJDZiNGU0Mjc5LThlMTktNDhhNi04ZDU5LTM5ZjJkNWE2NmUzOQ.jpg" alt="pic" class="ui avatar image">
+                                <img src="assets/faisal.jpg" alt="pic" class="ui avatar image">
                             </a> <b> Dr. Faisal Boudala </b> | Research Scientist at Environment and Climate Change Canada
                         </p>
                     </div>
@@ -190,33 +390,8 @@
         </div>
 
 
-        <div class="ui inverted vertical footer segment">
-            <div class="ui container">
-                <div class="ui stackable inverted divided equal height stackable grid">
-                    <div class="three wide column">
-                        <h4 class="ui inverted header">About</h4>
-                        <div class="ui inverted link list">
-                            <a href="#" class="item">Sitemap</a>
-                            <a href="#" class="item">Contact Us</a>
-                            <a href="#" class="item">Religious Ceremonies</a>
-                            <a href="#" class="item">Gazebo Plans</a>
-                        </div>
-                    </div>
-                    <div class="three wide column">
-                        <h4 class="ui inverted header">Services</h4>
-                        <div class="ui inverted link list">
-                            <a href="#" class="item">Banana Pre-Order</a>
-                            <a href="#" class="item">DNA FAQ</a>
-                            <a href="#" class="item">How To Access</a>
-                            <a href="#" class="item">Favorite X-Men</a>
-                        </div>
-                    </div>
-                    <div class="seven wide column">
-                        <h4 class="ui inverted header">Footer Header</h4>
-                        <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="ui inverted segment">
+            <span>Copyright © 2017 Sakshaat Choyikandi. All Rights Reserved.</span>
         </div>
     </div>
 

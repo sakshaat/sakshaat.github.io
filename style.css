@@ -6,9 +6,21 @@
     text-shadow: 1.5px 1.5px 2px black;
 }
 
-#education {
-    height: 600px;
-    padding: 20px;
+.main-section {
+    padding: 20px !important;
+    height: auto !important;
+}
+
+#projects .card {
+    min-width: 300px !important;
+}
+
+.card {
+    padding: 10px !important;
+}
+
+.ui.grid {
+    font-size: 1em;
 }
 
 div.courses {
@@ -59,10 +71,7 @@ div.courses {
 
 .masthead {
     background: url("assets/header-background-2.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
-    min-height: 60%;
 }
 
 .masthead .logo.item img {
