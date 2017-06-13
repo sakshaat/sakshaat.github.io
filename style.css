@@ -72,6 +72,8 @@ div.courses {
 .masthead {
     background: url("assets/header-background-2.jpg");
     background-size: cover;
+    min-height: 60%;
+    height: 50% !important;
 }
 
 .masthead .logo.item img {

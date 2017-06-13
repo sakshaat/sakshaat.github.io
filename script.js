@@ -2,20 +2,19 @@ $(window).on('beforeunload', function() {
     $(window).scrollTop(0);
 })
 
+// JQuery Plugin just tells us if the element is in the viewport
+$.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
 $(document)
     .ready(function() {
-
-
-        // JQuery Plugin just tells us if the element is in the viewport
-        $.fn.isInViewport = function() {
-            var elementTop = $(this).offset().top;
-            var elementBottom = elementTop + $(this).outerHeight();
-
-            var viewportTop = $(window).scrollTop();
-            var viewportBottom = viewportTop + $(window).height();
-
-            return elementBottom > viewportTop && elementTop < viewportBottom;
-        };
 
         function vis_obj_factory(reference) {
             return {
@@ -50,12 +49,16 @@ $(document)
             });
 
         $(window).bind('mousewheel', function(event) {
-            if ($('.masthead').isInViewport() && $(window).scrollTop() != 0) {
+            if ($('.masthead').isInViewport()) {
                 var pos = $('.masthead').css("background-position").split(" ");
-                if (event.originalEvent.wheelDelta >= 0) {
-                    $('.masthead').css("background-position", `${pos[0]} ${parseFloat(pos[1]) + 0.35}px`);
+                if ($(window).scrollTop() == 0) {
+                    $('.masthead').css("background-position", `${pos[0]} 0px`);
                 } else {
-                    $('.masthead').css("background-position", `${pos[0]} ${parseFloat(pos[1]) - 0.35}px`);
+                    if (event.originalEvent.wheelDelta >= 0) {
+                        $('.masthead').css("background-position", `${pos[0]} ${parseFloat(pos[1]) + 0.2}px`);
+                    } else {
+                        $('.masthead').css("background-position", `${pos[0]} ${parseFloat(pos[1]) - 0.2}px`);
+                    }
                 }
             }
         });
