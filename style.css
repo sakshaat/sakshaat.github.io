@@ -9,6 +9,16 @@
 .main-section {
     padding: 20px !important;
     height: auto !important;
+    -webkit-transition: opacity 0.4s ease-in;
+    -moz-transition: opacity 0.4s ease-in;
+    -o-transition: opacity 0.4s ease-in;
+    -ms-transition: opacity 0.4s ease-in;
+    transition: opacity 0.4s ease-in;
+    opacity: 0;
+}
+
+.main-section.in-view {
+    opacity: 100;
 }
 
 #projects .card {
