@@ -1,6 +1,8 @@
 $(window).on('beforeunload', function() {
-    $(window).scrollTop(0);
+    $(this).scrollTop(0);
 })
+
+lastY = $(this).scrollTop();
 
 // JQuery Plugin just tells us if the element is in the viewport
 $.fn.isInViewport = function() {
@@ -48,20 +50,28 @@ $(document)
                 }
             });
 
-        $(window).bind('mousewheel', function(event) {
+        $(window).bind('scroll mousewheel', function(event) {
+            // Masthead Parralax Effect
             if ($('.masthead').isInViewport()) {
+                var currY = $(this).scrollTop();
                 var pos = $('.masthead').css("background-position").split(" ");
-                if ($(window).scrollTop() == 0) {
+
+                // At the top
+                if (currY === 0) {
                     $('.masthead').css("background-position", `${pos[0]} 0px`);
                 } else {
-                    if (event.originalEvent.wheelDelta >= 0) {
+                    if (currY > lastY) {
+                        // Down
                         $('.masthead').css("background-position", `${pos[0]} ${parseFloat(pos[1]) + 0.2}px`);
-                    } else {
+                    } else if (currY < lastY) {
+                        // Up
                         $('.masthead').css("background-position", `${pos[0]} ${parseFloat(pos[1]) - 0.2}px`);
+
                     }
                 }
             }
 
+            // In-view fade-in transition
             $.each($('.main-section'), function() {
                 var current = $(this);
                 if (current.isInViewport()) {
@@ -70,6 +80,9 @@ $(document)
                     current.removeClass("in-view");
                 }
             })
+
+            lastY = currY;
+
         });
 
         function smooth_scroll(e) {
