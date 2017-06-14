@@ -62,10 +62,10 @@ $(document)
                 } else {
                     if (currY > lastY) {
                         // Down
-                        $('.masthead').css("background-position", `${pos[0]} ${parseFloat(pos[1]) + 0.2}px`);
+                        $('.masthead').css("background-position", `${pos[0]} ${parseFloat(pos[1]) - 0.1}px`);
                     } else if (currY < lastY) {
                         // Up
-                        $('.masthead').css("background-position", `${pos[0]} ${parseFloat(pos[1]) - 0.2}px`);
+                        $('.masthead').css("background-position", `${pos[0]} ${parseFloat(pos[1]) + 0.1}px`);
 
                     }
                 }
