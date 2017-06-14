@@ -63,12 +63,11 @@ $(document)
             }
 
             $.each($('.main-section'), function() {
-                if ($(this).isInViewport()) {
-                    $(this).addClass("in-view");
+                var current = $(this);
+                if (current.isInViewport()) {
+                    current.addClass("in-view");
                 } else {
-                    if ($(this).hasClass("in-view")) {
-                        $(this).removeClass("in-view");
-                    }
+                    current.removeClass("in-view");
                 }
             })
         });
