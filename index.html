@@ -10,6 +10,7 @@
     <!-- Site Properties -->
     <title>Sakshaat Choyikandi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -59,19 +60,22 @@
                     Sakshaat Choyikandi
                 </h1>
                 <div class="ui center aligned social-icons">
-                    <a href="https://github.com/sakshaat"> <i class="big github icon"></i> </a>
-                    <a href="mailto:sakshaat.choyikandi@mail.utoronto.ca?Subject=Hey!"> <i class="big envelope icon"></i> </a>
-                    <a href="https://www.linkedin.com/in/sakshaat/"> <i class="big linkedin icon"></i> </a>
+                    <a href="https://github.com/sakshaat" target="_blank"> <i class="big github icon"></i> </a>
+                    <a href="mailto:sakshaat.choyikandi@mail.utoronto.ca?Subject=Hey!" target="_blank"> <i class="big envelope icon"></i> </a>
+                    <a href="https://www.linkedin.com/in/sakshaat/" target="_blank"> <i class="big linkedin icon"></i> </a>
                 </div>
             </div>
         </div>
         <div id="about-me" class="ui centered grid segment main-section">
-            <h1>What I do</h1>
-            <p>I am an extremely self-driven and creative Software Developer with a natural curiousity for learning. I have used my background in Computer Science to develop numerous <a href="#education">academic</a>,
-                <a href="#work">professional</a> and side-<a href="#projects">projects</a>. I also have a strong drive to innovate and create products that I find useful which I believe other people may appreciate as well. I also enjoy other activities
-                such as making <a href="http://soundcloud.com/sadici">Hip-Hop music</a>, Mixed Martial Arts and playing basketball!
+            <h3>About Me</h3>
+            <hr>
+            <p class="ui eight wide column">I am an extremely self-driven and creative Software Developer with a natural curiousity for learning. I have used my background in Computer Science to develop numerous <a href="#education">academic</a>,
+                <a href="#work">professional</a> and <a href="#projects">side-projects</a>. I also have a strong drive to innovate and create products that I find useful which I believe other people may appreciate as well. I also enjoy other activities
+                such as making <a href="http://soundcloud.com/sadici" target="_blank">Hip-Hop music</a>, Mixed Martial Arts and playing basketball!
             </p>
-            <div class="ui five doubling cards">
+            <h3>My Skillset</h3>
+            <hr>
+            <div class="ui segment basic five doubling cards">
                 <div class="skills ui raised card">
                     <div class="header centered">
                         <i class="big terminal icon"></i>
@@ -152,8 +156,9 @@
             </div>
 
         </div>
-        <div id="education" class="ui grid segment main-section">
-            <h1>Education</h1>
+        <div id="education" class="ui centered grid segment main-section">
+            <h3>Education</h3>
+            <hr>
             <div class="logo ui grid eight wide column">
                 <div class="row"></div>
                 <div class="row">
@@ -226,41 +231,47 @@
             </div>
         </div>
 
-        <div id="work" class="ui stackable grid segment main-section">
-            <h1>Work Experience</h1>
-            <div class="row">
-                <div class="ui grid four wide column">
-                    <div class="row">
-                        <img class="ui medium image centered logo" src="assets/ECCC-logo.jpg" alt="ECCC-LOGO" />
-                    </div>
-                </div>
-                <div class="ui grid eight wide column">
-                    <h2>Environment and Climate Change Canada</h2>
-                    <h3>Remote Sensing Research Assistant (Co-op)</h3>
-                    <h4>September 2016 - December 2016</h4>
-                    <p>Developed web applications for a research project writing, documenting and maintaining thousands of lines of Shell and Python scripts used by scientists researching ways to accurately predict aircraft icing incidents</p>
-                </div>
-            </div>
+        <div id="work" class="ui stackable grid segment main-section centered">
+            <h3>Work Experience</h3>
             <hr>
             <div class="row">
-                <div class="ui grid four wide column">
-                    <div class="row">
-                        <img class="ui medium image centered logo" src="assets/saksham-logo.png" alt="Saksham-LOGO" />
+                <div class="company ui six wide column">
+                    <div class="ui grid four wide column">
+                        <div class="image-cont row">
+                            <img class="ui medium image centered logo" src="assets/ECCC-logo.jpg" alt="ECCC-LOGO" />
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="ui grid eight wide column">
+                        <h2>Environment and Climate Change Canada</h2>
+                        <h3>Remote Sensing Research Assistant (Co-op)</h3>
+                        <h4>September 2016 - December 2016</h4>
+                        <p>Developed web applications for a research project writing, documenting and maintaining thousands of lines of Shell and Python scripts used by scientists researching ways to accurately predict aircraft icing incidents.</p>
                     </div>
                 </div>
-                <div class="ui grid eight wide column">
-                    <h2>Saksham Entertainment</h2>
-                    <h3>Assistant Event Manager</h3>
-                    <h4>March 2014 – July 2014</h4>
-                    <p>Designed, implemented, deployed and maintained the company’s website under a very tight deadline to ensure uninterrupted access of the promotional material. Maintained great relationships with the artists, sound crew and the guests
-                        to ensure smooth running of events hosted by the company.</p>
+
+                <div class="company ui six wide column">
+                    <div class="ui grid four wide column">
+                        <div class="image-cont row">
+                            <img class="ui medium image centered logo" src="assets/saksham-logo.png" alt="Saksham-LOGO" />
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="ui grid eight wide column">
+                        <h2>Saksham Entertainment</h2>
+                        <h3>Assistant Event Manager</h3>
+                        <h4>March 2014 – July 2014</h4>
+                        <p>Designed, implemented, deployed and maintained the company’s website under a very tight deadline to ensure uninterrupted access of the promotional material. Maintained great relationships with the artists, sound crew and the guests
+                            to ensure smooth running of events hosted by the company.</p>
+                    </div>
+
                 </div>
             </div>
+
         </div>
 
 
         <div id="projects" class="ui grid segment main-section centered">
-            <h1>Projects</h1>
             <div class="ui twelve wide column">
                 <div class="ui six stackable cards">
                     <div class="ui raised green card">
@@ -374,7 +385,6 @@
 
 
         <div id="recommendation" class="ui vertical stripe quote segment main-section">
-            <h1>Recommendations</h1>
             <div class="ui equal width stackable internally celled grid ">
                 <div class="center aligned row ">
                     <div class="column">

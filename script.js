@@ -86,21 +86,27 @@ $(document)
         });
 
         function smooth_scroll(e) {
-            e.preventDefault();
             var hash = this.hash;
             if (this.hash !== "") {
                 $("html body").animate({
                     scrollTop: $(hash).offset().top + 1
                 }, 800, function() {})
             } else {
-                $("html body").animate({
-                    scrollTop: 0
-                }, 800, function() {})
+                if ($(this).attr("href") === "#") {
+                    $("html body").animate({
+                        scrollTop: 0
+                    }, 800, function() {})
+                } else {
+                    return true;
+                }
             }
+
+            return false;
         }
 
         $("#follow-menu a").on("click", smooth_scroll);
         $("#main-menu a").on("click", smooth_scroll);
+        $("#about-me a").on("click", smooth_scroll);
 
         $('#education').visibility(vis_obj_factory("#education"));
         $('#work').visibility(vis_obj_factory("#work"));

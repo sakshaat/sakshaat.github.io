@@ -2,8 +2,51 @@
     display: none;
 }
 
+html * {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main-section>hr {
+    width: 15%;
+    margin-bottom: 10px !important;
+    margin-top: 5px;
+}
+
+.company h2 {
+    padding: 10px;
+    margin-bottom: 0px;
+    min-height: 2.5em;
+}
+
+.company * {
+    text-align: center;
+}
+
+.company .image-cont {
+    height: 115px;
+    overflow: hidden;
+    padding: 20px !important;
+}
+
+.company h3 {
+    margin: 0px;
+}
+
+.company h4 {
+    margin: 0px;
+}
+
+.company p {
+    margin-top: 15px;
+}
+
 .masthead h1 {
     text-shadow: 1.5px 1.5px 2px black;
+}
+
+#about-me>p {
+    text-align: center;
+    font-size: 1.3em;
 }
 
 .main-section {
@@ -172,5 +215,8 @@ div.courses {
     }
     .masthead #profile {
         width: 10em;
+    }
+    .main-section {
+        opacity: 1;
     }
 }
