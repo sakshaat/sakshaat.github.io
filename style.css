@@ -207,8 +207,17 @@ div.courses {
 }
 
 @media only screen and (max-width: 700px) {
+    .ui.vertical.stripe {
+        font-size: 1em;
+    }
     #work .card .image {
         min-height: 0px;
+    }
+    #work .card {
+        min-width: 0px !important;
+    }
+    #projects .card {
+        min-width: 0px !important;
     }
     .ui.fixed.menu {
         display: none !important;
@@ -235,6 +244,7 @@ div.courses {
     }
     #about-me p {
         width: 90% !important;
+        font-size: 0.8em;
     }
     #my-skillset .skills:last-of-type {
         margin-left: auto;
@@ -251,9 +261,21 @@ div.courses {
         width: 65% !important;
     }
     #education .column {
+        margin-top: 0px;
         width: 100% !important;
+    }
+    #education .column p {
+        margin-bottom: 25px;
     }
     #education p {
         text-align: center;
+    }
+    #education h1 {
+        margin-bottom: 5px;
+        font-size: 7vw;
+    }
+    #education h3 {
+        margin-top: 0px;
+        font-size: 4vw;
     }
 }

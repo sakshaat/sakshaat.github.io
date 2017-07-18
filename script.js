@@ -2,7 +2,7 @@
 //     $(this).scrollTop(0);
 // })
 
-lastY = $(this).scrollTop();
+// lastY = $(this).scrollTop();
 
 // JQuery Plugin just tells us if the element is in the viewport
 $.fn.isInViewport = function() {
@@ -54,6 +54,12 @@ $(document)
             var hash = this.hash;
             $(".ui.sidebar").sidebar("hide");
 
+            // If mobile don't bother with smooth scrolling just go to the section
+            if (window.innerWidth <= 800 && window.innerHeight <= 600) {
+                return true;
+            }
+
+            // not on mobile
             if (this.hash !== "") {
                 $("html body").animate({
                     scrollTop: $(hash).offset().top + 1
