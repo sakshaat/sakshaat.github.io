@@ -30,10 +30,11 @@
     </div>
 
     <!-- Sidebar Menu -->
-    <div class="ui vertical inverted sidebar menu">
-        <a class="active item">Home</a>
-        <a class="item">Work</a>
-        <a class="item">Projects</a>
+    <div id="sidebar-menu" class="ui vertical inverted sidebar menu">
+        <a class="active item" href="#">Home</a>
+        <a class="item" href="#education">Education</a>
+        <a class="item" href="#work">Work</a>
+        <a class="item" href="#projects">Projects</a>
     </div>
 
 
@@ -73,6 +74,8 @@
                 <a href="#work">professional</a> and <a href="#projects">side-projects</a>. I also have a strong drive to innovate and create products that I find useful which I believe other people may appreciate as well. I also enjoy other activities
                 such as making <a href="http://soundcloud.com/sadici" target="_blank">Hip-Hop music</a>, Mixed Martial Arts and playing basketball!
             </p>
+        </div>
+        <div id="my-skillset" class="ui centered grid segment main-section">
             <h3>My Skillset</h3>
             <hr>
             <div class="ui segment basic five doubling cards">
@@ -159,8 +162,7 @@
         <div id="education" class="ui centered grid segment main-section">
             <h3>Education</h3>
             <hr>
-            <div class="logo ui grid eight wide column">
-                <div class="row"></div>
+            <div class="logo ui grid ten wide column">
                 <div class="row">
                     <img class="ui medium image centered circular logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Utoronto_coa.svg/1024px-Utoronto_coa.svg.png" alt="UOFT-LOGO" />
                 </div>
@@ -168,8 +170,6 @@
                     <h1> University of Toronto </h1>
                     <h3> September 2014 - Present </h3>
                 </div>
-            </div>
-            <div class="ui grid two wide column">
             </div>
             <div class="ui grid six wide column">
                 <p>
@@ -234,44 +234,54 @@
         <div id="work" class="ui stackable grid segment main-section centered">
             <h3>Work Experience</h3>
             <hr>
-            <div class="row">
-                <div class="company ui six wide column">
-                    <div class="ui grid four wide column">
-                        <div class="image-cont row">
-                            <img class="ui medium image centered logo" src="assets/ECCC-logo.jpg" alt="ECCC-LOGO" />
+            <div class="ui ten wide column">
+                <div class="ui two stackable cards">
+                    <div class="red card">
+                        <div class="image">
+                            <img src="assets/ECCC-logo.jpg" alt="ECCC-LOGO" />
+                        </div>
+                        <div class="extra content">
+                            <div class="header">Remote Sensing Research Assistant</div>
+                            <div class="meta">
+                                <a href="https://www.ec.gc.ca/" target="_blank">Environment and Climate Change Canada</a>
+                            </div>
+                            <div class="description">
+                                Developed web applications for a research project writing, documenting and maintaining thousands of lines of Shell and Python scripts used by scientists researching ways to accurately predict aircraft icing incidents.
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <span class="left floated"> September 2016 - December 2016 </span>
                         </div>
                     </div>
-                    <hr>
-                    <div class="ui grid eight wide column">
-                        <h2>Environment and Climate Change Canada</h2>
-                        <h3>Remote Sensing Research Assistant (Co-op)</h3>
-                        <h4>September 2016 - December 2016</h4>
-                        <p>Developed web applications for a research project writing, documenting and maintaining thousands of lines of Shell and Python scripts used by scientists researching ways to accurately predict aircraft icing incidents.</p>
-                    </div>
-                </div>
 
-                <div class="company ui six wide column">
-                    <div class="ui grid four wide column">
-                        <div class="image-cont row">
-                            <img class="ui medium image centered logo" src="assets/saksham-logo.png" alt="Saksham-LOGO" />
+                    <div class="orange card">
+                        <div class="image">
+                            <img src="assets/saksham-logo.png" alt="Saksham-LOGO" />
+                        </div>
+                        <div class="extra content">
+                            <div class="header">Web Developer</div>
+                            <div class="meta">
+                                <a href="http://www.sakshamentertainment.com" target="_blank">Saksham Entertainment</a>
+                            </div>
+                            <div class="description">
+                                Designed, implemented, deployed and maintained the company’s website under a very tight deadline to ensure uninterrupted access of the promotional material. Maintained great relationships with the artists, sound crew and the guests to ensure smooth running
+                                of events hosted by the company.
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <span class="left floated"> March 2014 – July 2014 </span>
                         </div>
                     </div>
-                    <hr>
-                    <div class="ui grid eight wide column">
-                        <h2>Saksham Entertainment</h2>
-                        <h3>Assistant Event Manager</h3>
-                        <h4>March 2014 – July 2014</h4>
-                        <p>Designed, implemented, deployed and maintained the company’s website under a very tight deadline to ensure uninterrupted access of the promotional material. Maintained great relationships with the artists, sound crew and the guests
-                            to ensure smooth running of events hosted by the company.</p>
-                    </div>
-
                 </div>
             </div>
+
 
         </div>
 
 
         <div id="projects" class="ui grid segment main-section centered">
+            <h3>Projects</h3>
+            <hr>
             <div class="ui twelve wide column">
                 <div class="ui six stackable cards">
                     <div class="ui raised green card">
@@ -384,7 +394,9 @@
         </div>
 
 
-        <div id="recommendation" class="ui vertical stripe quote segment main-section">
+        <div id="recommendation" class="ui grid vertical stripe quote segment main-section centered">
+            <h3>Recommendations</h3>
+            <hr>
             <div class="ui equal width stackable internally celled grid ">
                 <div class="center aligned row ">
                     <div class="column">

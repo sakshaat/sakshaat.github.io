@@ -57,11 +57,11 @@ html * {
     -o-transition: opacity 0.3s ease-in;
     -ms-transition: opacity 0.3s ease-in;
     transition: opacity 0.3s ease-in;
-    opacity: 0;
+    opacity: 1;
 }
 
-.main-section.in-view {
-    opacity: 1;
+#recommendation h3 {
+    font-size: 1.28rem;
 }
 
 #projects .card {
@@ -70,6 +70,7 @@ html * {
 
 .card {
     padding: 10px !important;
+    margin-top: 20px !important;
 }
 
 .ui.grid {
@@ -181,8 +182,8 @@ div.courses {
 }
 
 .quote.stripe.segment .grid .column {
-    padding-top: 5em;
-    padding-bottom: 5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     padding-left: 20%;
     padding-right: 20%;
 }
@@ -195,7 +196,20 @@ div.courses {
     display: none;
 }
 
+#work .card {
+    min-width: 300px;
+}
+
+#work .card .image {
+    padding: 35px;
+    background-color: white;
+    min-height: 22vh;
+}
+
 @media only screen and (max-width: 700px) {
+    #work .card .image {
+        min-height: 0px;
+    }
     .ui.fixed.menu {
         display: none !important;
     }
@@ -218,5 +232,28 @@ div.courses {
     }
     .main-section {
         opacity: 1;
+    }
+    #about-me p {
+        width: 90% !important;
+    }
+    #my-skillset .skills:last-of-type {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+    #projects>.column {
+        width: 100% !important;
+    }
+    #education .logo {
+        width: 100% !important;
+    }
+    #education .logo img {
+        width: 65% !important;
+    }
+    #education .column {
+        width: 100% !important;
+    }
+    #education p {
+        text-align: center;
     }
 }
