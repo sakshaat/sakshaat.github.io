@@ -12,82 +12,93 @@ $.fn.isInViewport = function() {
     var viewportTop = $(window).scrollTop();
     var viewportBottom = viewportTop + $(window).height();
 
-    return elementBottom > viewportTop && elementTop < viewportBottom;
+    if (elementBottom < viewportTop || elementTop > viewportBottom) {
+        return false;
+    }
+
+    var workingTop;
+    if (elementTop > viewportTop) {
+        // element top is on page
+        workingTop = elementTop;
+    } else {
+        workingTop = viewportTop;
+    }
+
+    var workingBottom;
+    if (elementBottom < viewportBottom) {
+        // element bottom is on page
+        workingBottom = elementBottom;
+    } else {
+        workingBottom = viewportBottom;
+    }
+
+    var workingHeight = workingBottom - workingTop;
+    var workingPercentage = (workingHeight / $(window).height()) * 100;
+
+    return workingPercentage > 55.0;
 };
 
-$(document)
-    .ready(function() {
+$(document).ready(function() {
+    $(window).on("scroll", function() {
+        handle_menu("#home");
+        handle_menu("#education");
+        handle_menu("#work");
+        handle_menu("#projects");
+    })
 
-        function vis_obj_factory(reference) {
-            return {
-                once: false,
-                onTopPassed: function() {
-                    if ($("#follow-menu .active").attr("href") !== reference) {
-                        $("#follow-menu .active").removeClass("active");
-                        $(`#follow-menu a[href='${reference}']`).addClass("active");
-                    }
-                },
-                onTopPassedReverse: function() {
-                    $("#follow-menu .active").removeClass("active");
-                    $(`#follow-menu a[href='${reference}']`).prev().addClass("active");
-                },
-                onBottomPassedReverse: function() {
-                    $("#follow-menu .active").removeClass("active");
-                    $(`#follow-menu a[href='${reference}']`).addClass("active");
-                }
+    function handle_menu(ref) {
+        if ($(ref).isInViewport()) {
+            $("#follow-menu .active").removeClass("active");
+            $(`#follow-menu a[href='${ref}']`).addClass("active");
+        }
+    }
+
+    // fix menu when passed
+    $('.masthead')
+        .visibility({
+            once: false,
+            onBottomPassed: function() {
+                $('.fixed.menu').transition('fade in');
+            },
+            onBottomPassedReverse: function() {
+                $('.fixed.menu').transition('fade out');
             }
+        });
+
+    function smooth_scroll(e) {
+        var hash = this.hash;
+        $(".ui.sidebar").sidebar("hide");
+
+        // If mobile don't bother with smooth scrolling just go to the section
+        if (window.innerWidth <= 800 && window.innerHeight <= 600) {
+            return true;
         }
 
-        // fix menu when passed
-        $('.masthead')
-            .visibility({
-                once: false,
-                onBottomPassed: function() {
-                    $('.fixed.menu').transition('fade in');
-                },
-                onBottomPassedReverse: function() {
-                    $('.fixed.menu').transition('fade out');
-                }
-            });
-
-        function smooth_scroll(e) {
-            var hash = this.hash;
-            $(".ui.sidebar").sidebar("hide");
-
-            // If mobile don't bother with smooth scrolling just go to the section
-            if (window.innerWidth <= 800 && window.innerHeight <= 600) {
-                return true;
-            }
-
-            // not on mobile
-            if (this.hash !== "") {
+        // not on mobile
+        if (this.hash !== "") {
+            $("body,html").animate({
+                scrollTop: $(hash).offset().top + 1
+            }, 400, function() {})
+        } else {
+            if ($(this).attr("href") === "#") {
                 $("body,html").animate({
-                    scrollTop: $(hash).offset().top + 1
+                    scrollTop: 0
                 }, 400, function() {})
             } else {
-                if ($(this).attr("href") === "#") {
-                    $("body,html").animate({
-                        scrollTop: 0
-                    }, 400, function() {})
-                } else {
-                    return true;
-                }
+                return true;
             }
-
-            return false;
         }
 
-        $("#follow-menu a").on("click", smooth_scroll);
-        $("#main-menu a").on("click", smooth_scroll);
-        $("#about-me a").on("click", smooth_scroll);
-        $('.ui.sidebar a').on("click", smooth_scroll);
+        return false;
+    }
 
-        $('#education').visibility(vis_obj_factory("#education"));
-        $('#work').visibility(vis_obj_factory("#work"));
-        $('#projects').visibility(vis_obj_factory("#projects"));
+    $("#follow-menu a").on("click", smooth_scroll);
+    $("#main-menu a").on("click", smooth_scroll);
+    $("#about-me a").on("click", smooth_scroll);
+    $('.ui.sidebar a').on("click", smooth_scroll);
 
-        // create sidebar and attach to menu open
-        $('.ui.sidebar')
-            .sidebar('attach events', '.toc.item');
+    // create sidebar and attach to menu open
+    $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item');
 
-    });
+});
