@@ -208,6 +208,10 @@ div.courses {
     max-width: 600px;
 }
 
+.work-date {
+    border-top: 0cm !important;
+}
+
 #work .cards {
     max-width: 1200px;
     margin: 0 auto;

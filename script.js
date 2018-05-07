@@ -61,14 +61,14 @@ $(document)
 
             // not on mobile
             if (this.hash !== "") {
-                $("html body").animate({
+                $("body,html").animate({
                     scrollTop: $(hash).offset().top + 1
-                }, 800, function() {})
+                }, 400, function() {})
             } else {
                 if ($(this).attr("href") === "#") {
-                    $("html body").animate({
+                    $("body,html").animate({
                         scrollTop: 0
-                    }, 800, function() {})
+                    }, 400, function() {})
                 } else {
                     return true;
                 }
