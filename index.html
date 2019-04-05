@@ -26,41 +26,47 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="has-background-dark">
+  <body class="d-flex has-background-dark justify-content-between flex-column">
     <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
-    <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-5">Sakshaat Choyikandi</h1>
-              <p class="lead">Software Developer</p>
-            </div>
-          </div>
-
-    <section class="links container">
-      <div>
-        <a href="#about-content">About</a>
-        <a href="#education-content">Education</a>
-        <a href="#work-content">Work Experience</a>
-        <a href="#projects-content">Projects</a>
-        <a href="#contact-content">Contact</a>
-      </div>
-
-      <section class="content">
-            <div id="about-content">About</div>
-            <div hidden id="education-content">Education</div>
-            <div hidden id="work-content">Work Experience</div>
-            <div hidden id="projects-content">Projects</div>
-            <div hidden id="contact-content">Contact</div>
-        </section>
-    </section>
-
-
-
     
+    <header class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-5">Sakshaat Choyikandi</h1>
+        <p class="lead">Software Developer</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="p-2 links container">
+        <div>
+          <a href="#about-content">About</a>
+          <a href="#education-content">Education</a>
+          <a href="#work-content">Work Experience</a>
+          <a href="#projects-content">Projects</a>
+          <a href="#contact-content">Contact</a>
+        </div>
+
+        <section class="p-2 content">
+          <div id="about-content">About</div>
+          <div hidden id="education-content">Education</div>
+          <div hidden id="work-content">Work Experience</div>
+          <div hidden id="projects-content">Projects</div>
+          <div hidden id="contact-content">Contact</div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <span class="text-muted">Copyright © 2017 Sakshaat Choyikandi. All Rights Reserved.</span>
+      </div>
+    </footer>
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
