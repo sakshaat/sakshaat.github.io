@@ -1,14 +1,21 @@
-$(function(){
+$(function() {
+  switchContent = e => {
+    e.preventDefault();
+    let key = e.target.hash;
+    
+    let showElem = $(`> div${key}`, ".content");
+    let hideElems = $(`> div:not(${key})`, ".content");
 
-    // makes sure links clicked show the right sections
-    $(".links *").click(function(e) {
-        e.preventDefault();
-        let key = e.target.hash.substring(1); 
-        let elems = $('.content *');
+    showElem.show();
+    showElem.children().show();
 
-        Object.keys(elems).forEach(i => {
-            elems[i].hidden = elems[i].id === key ? false : true;
-        })
-    })
-  
-  });
+    hideElems.hide();
+    hideElems.children().hide();
+  };
+
+  $(".content > div:not('#education-content')").hide();
+
+  // makes sure links clicked show the right sections
+  $(".links a").click(switchContent);
+  $("#about-content a.content-links").click(switchContent);
+});
