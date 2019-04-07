@@ -19,6 +19,20 @@ body {
   height: 100%;
 }
 
+/* about */
+#about-content > .pull-left {
+  float: left;
+}
+
+#about-content > .pull-right {
+  float: right;
+}
+
+#about-content #profile {
+  border-radius: 100%;
+  max-width: 200px;
+}
+
 /* education */
 #uoft-logo {
   max-height: 100%;
