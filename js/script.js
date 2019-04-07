@@ -13,7 +13,7 @@ $(function() {
     hideElems.children().hide();
   };
 
-  $(".content > div:not('#education-content')").hide();
+  $(".content > div:not('#projects-content')").hide();
 
   // makes sure links clicked show the right sections
   $(".links a").click(switchContent);
