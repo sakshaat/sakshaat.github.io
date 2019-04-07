@@ -1,8 +1,61 @@
+:root {
+  --white-color: #edeeef;
+  --link-color: #145c9e;
+  --active-link-color: #df2935;
+  --text-color: #444545;
+  --secondary-color: #db2b39;
+}
+
+* {
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 200 !important;
+}
+
+
+
+a {
+  color: var(--link-color) !important;
+  transition: color 0.12s ease-in-out;
+}
+
+a:hover {
+  color: var(--active-link-color) !important;
+  text-decoration-line: none !important;
+}
+
+header a>i {
+  transition: color 0.12s ease-in-out;
+}
+
+header a>i:hover {
+  color: var(--link-color) !important;
+}
+
 body {
   min-height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: space-between;
+  background-color: var(--white-color);
+}
+
+#about-content p {
+  font-weight: 200 !important;
+}
+
+h3 {
+  font-size: 2.3em !important;
+}
+
+#about-content h5 {
+  font-size: 1.3em !important;
 }
 
 .content {
@@ -14,15 +67,27 @@ body {
   padding-top: 20px !important;
   padding-bottom: 20px !important;
   margin-bottom: 15px !important;
+  background-color: var(--white-color);
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23145c9e' fill-opacity='0.07' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .content > div {
   height: 100%;
 }
 
+.content li {
+  font-weight: 100 !important;
+}
+
+
 /* links */
 
 /* about */
+
+#about-content .skillset-div {
+  font-weight: 200 !important;
+}
+
 #about-content > .pull-left {
   float: left;
 }
@@ -33,10 +98,35 @@ body {
 
 #about-content #profile {
   border-radius: 100%;
+  display: block;
+  width: auto;
   max-width: 200px;
+}
+
+footer .text {
+  font-size: 0.7em;
 }
 
 /* education */
 #uoft-logo {
   max-height: 80%;
-} 
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  footer .text {
+    font-size: 0.8em;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #about-content #profile {
+    max-width: 170px;
+  }
+}

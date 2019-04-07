@@ -26,7 +26,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="d-flex has-background-dark justify-content-between flex-column">
+  <body class="d-flex justify-content-between flex-column">
     <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
@@ -35,9 +35,11 @@
     <![endif]-->
     <div>
       <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-5">Sakshaat Choyikandi</h1>
-          <p class="lead">Software Developer, Toronto, CA</p>
+        <header class="container">
+          <h1 class="display-4 font-weight-light">Sakshaat Choyikandi</h1>
+          <p class="lead font-weight-lighter">
+            Software Developer, Toronto, CA
+          </p>
           <span>
             <a href="mailto:sakshaat.dc@gmail.com"
               ><i class="fas fa-lg fa-at"></i
@@ -49,14 +51,14 @@
               ><i class="fab fa-lg fa-linkedin"></i
             ></a>
           </span>
-        </div>
+        </header>
       </div>
       <div>
         <section class="container">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
               <a
-                class="nav-link"
+                class="nav-link active"
                 aria-controls="about"
                 aria-selected="true"
                 id="about-tab"
@@ -66,35 +68,54 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link"                 
-              aria-controls="education"
-              aria-selected="true"
-              id="education-tab"
-              data-toggle="tab" href="#education-content">Education</a>
+              <a
+                class="nav-link"
+                aria-controls="education"
+                aria-selected="true"
+                id="education-tab"
+                data-toggle="tab"
+                href="#education-content"
+                >Education</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" 
-              class="nav-link"                 
-              aria-controls="work"
-              aria-selected="true"
-              id="work-tab"
-              data-toggle="tab" href="#work-content">Work Experience</a>
+              <a
+                class="nav-link"
+                aria-controls="work"
+                aria-selected="true"
+                id="work-tab"
+                data-toggle="tab"
+                href="#work-content"
+                >Work Experience</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link"
-              class="nav-link"                 
-              aria-controls="projects"
-              aria-selected="true"
-              id="projects-tab"
-              data-toggle="tab"  href="#projects-content">Projects</a>
+              <a
+                class="nav-link"
+                aria-controls="projects"
+                aria-selected="true"
+                id="projects-tab"
+                data-toggle="tab"
+                href="#projects-content"
+                >Projects</a
+              >
             </li>
           </ul>
 
           <section class="p-3 tab-content content">
-            <div class="tab-pane fade show active" id="about-content" role="tabpanel" aria-labelledby="about-tab">
+            <div
+              class="tab-pane fade show active"
+              id="about-content"
+              role="tabpanel"
+              aria-labelledby="about-tab"
+            >
               <h3>About</h3>
-              <div class="pull-left p-3 col-12 col-sm-auto">
-                <img src="assets/profile.jpg" id="profile" />
+              <div class="pull-left p-3 col-12 col-sm-5 col-lg-3">
+                <img
+                  src="assets/profile.jpg"
+                  class="mx-auto img-fluid"
+                  id="profile"
+                />
               </div>
               <div class="">
                 <p>
@@ -108,12 +129,10 @@
                   I am an extremely self-driven and creative Software Developer
                   with a natural curiosity for learning. I have used my
                   background in Computer Science to develop numerous
-                  <a class="content-links" href="#education-content">academic</a
-                  >,
-                  <a class="content-links" href="#work-content">professional</a>
+                  <a class="content-links" href="#education-tab">academic</a>,
+                  <a class="content-links" href="#work-tab">professional</a>
                   and
-                  <a class="content-links" href="#projects-content"
-                    >side-projects</a
+                  <a class="content-links" href="#projects-tab">side-projects</a
                   >. I also have a strong drive to innovate and create products
                   that I find useful which I believe other people may appreciate
                   as well. I also enjoy other activities such as producing
@@ -144,12 +163,13 @@
                 <p>
                   You can find my professional resume
                   <a
+                    target="__blank"
                     href="https://drive.google.com/file/d/1j9z5CgF8MqvNY9no-kyZwVicFYJ_SQQV/view?usp=sharing"
                     >here</a
                   >.
                 </p>
               </div>
-              <div class="pt-3">
+              <div class="pt-3 skillset-div">
                 <h5>Technical Skillset</h5>
                 <table class="table">
                   <tbody>
@@ -186,7 +206,12 @@
                 </table>
               </div>
             </div>
-            <div class="tab-pane fade" id="education-content" role="tabpanel" aria-labelledby="education-tab">
+            <div
+              class="tab-pane fade"
+              id="education-content"
+              role="tabpanel"
+              aria-labelledby="education-tab"
+            >
               <h3>Education</h3>
               <div class="container">
                 <div class="row">
@@ -216,11 +241,13 @@
                   </div>
                 </div>
               </div>
-              <h3>Extracurriculars</h3>
-              <div class="leadership-container container">
-                <row>
-                  Co-Founder & Co-President, UofT Open Source Society (May 2018
-                  - April 2019)
+              <h4 class="mb-3">Extracurriculars</h4>
+              <div class="leadership-container container ml-3 col-12">
+                <div class="row mt-2 mb-2">
+                  <h5>
+                    Co-Founder & Co-President, UofT Open Source Society (May
+                    2018 - April 2019)
+                  </h5>
                   <ul>
                     <li>
                       Launched a student club with the goal of spearheading
@@ -235,9 +262,9 @@
                       100 students.
                     </li>
                   </ul>
-                </row>
-                <row>
-                  Associate, TEDxUTSC (September 2018 - June 2019)
+                </div>
+                <div class="row mt-2 mb-2">
+                  <h5>Associate, TEDxUTSC (September 2018 - June 2019)</h5>
                   <ul>
                     <li>
                       As part of a team of 30, helped organize and promote the
@@ -245,26 +272,33 @@
                       people in attendance
                     </li>
                   </ul>
-                </row>
-                <row>
-                  Programming Mentor, First Robotics Canada (December 2018 -
-                  March 2019)
+                </div>
+                <div class="row mt-2 mb-2">
+                  <h5>
+                    Programming Mentor, First Robotics Canada (December 2018 -
+                    March 2019)
+                  </h5>
                   <ul>
                     <li>
                       Mentored a group of 12 middle school students to program
                       their own robots for the First Robotics Competition 2019
                     </li>
                   </ul>
-                </row>
+                </div>
               </div>
             </div>
 
-            <div class="tab-pane fade" id="work-content" role="tabpanel" aria-labelledby="work-tab">
+            <div
+              class="tab-pane fade"
+              id="work-content"
+              role="tabpanel"
+              aria-labelledby="work-tab"
+            >
               <h3>
                 Work Experience
               </h3>
               <div class="container">
-                <div class="row">
+                <div class="row my-3">
                   <div class="col-lg-10">
                     <h5>
                       Research Technician, University of Toronto
@@ -280,7 +314,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row my-2">
                   <div class="col-lg-10">
                     <h5>
                       Software Developer, Defence Research and Development
@@ -298,7 +332,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row my-2">
                   <div class="col-lg-10">
                     <h5>
                       Research Assistant, Environment and Climate Change Canada
@@ -317,13 +351,23 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade" id="projects-content" role="tabpanel" aria-labelledby="projects-tab">
+            <div
+              class="tab-pane fade"
+              id="projects-content"
+              role="tabpanel"
+              aria-labelledby="projects-tab"
+            >
               <h3>Notable Projects</h3>
               <div class="row">
-                <div class="col-md-6">
-                  <a href="https://github.com/shaynair/CryptoWealth"
-                    ><h5><i class="fab fa-github"></i> CryptoWealth</h5></a
-                  >
+                <div class="col-md-11 col-lg-9">
+                  <h5>
+                    CryptoWealth
+                    <a
+                      href="https://github.com/shaynair/CryptoWealth"
+                      target="__blank"
+                      ><i class="fas fa-link"></i
+                    ></a>
+                  </h5>
                   <span
                     >JavaScript, Python, HTML5, SASS, React.js, Django,
                     Heroku</span
@@ -338,10 +382,14 @@
                     </li>
                   </ul>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-11 col-lg-9">
                   <h5>
                     MoRiSi (Monte Carlo Risk Simulation)
+                    <a href="https://youtu.be/RtSylTNe9iA" target="__blank"
+                      ><i class="fas fa-link"></i
+                    ></a>
                   </h5>
+
                   <span>Python, Numpy, Pandas, Multiprocessing</span>
                   <ul>
                     <li>
@@ -356,11 +404,15 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6">
-                  <a
-                    href="https://bugzilla.mozilla.org/show_bug.cgi?id=1517483#c33"
-                    ><h5><i class="fab fa-firefox"></i> Mozilla Firefox</h5></a
-                  >
+                <div class="col-md-11 col-lg-9">
+                  <h5>
+                    Mozilla Firefox
+                    <a
+                      href="https://bugzilla.mozilla.org/show_bug.cgi?id=1517483"
+                      target="__blank"
+                      ><i class="fas fa-link"></i
+                    ></a>
+                  </h5>
                   <span>JavaScript, C++</span>
                   <ul>
                     <li>
@@ -372,12 +424,15 @@
                     </li>
                   </ul>
                 </div>
-                <div class="col-md-6">
-                  <a href="https://github.com/office-hour-scheduler/ohs"
-                    ><h5>
-                      <i class="fab fa-github"></i> Office Hour Scheduler
-                    </h5></a
-                  >
+                <div class="col-md-11 col-lg-9">
+                  <h5>
+                    Office Hour Scheduler
+                    <a
+                      href="https://github.com/office-hour-scheduler/ohs"
+                      target="__blank"
+                      ><i class="fas fa-link"></i
+                    ></a>
+                  </h5>
                   <span
                     >JavaScript, React, GraphQL, Apollo, Python, Flask, HTML5,
                     PostgreSQL</span
@@ -391,6 +446,10 @@
                     </li>
                   </ul>
                 </div>
+                <div class="col-md-11 col-lg-9">
+                  <span>You can find my other projects <a target="__blank" href="https://github.com/sakshaat"
+                    >here!</a></span>
+                </div>
               </div>
             </div>
           </section>
@@ -399,9 +458,9 @@
     </div>
 
     <footer class="footer">
-      <div class="container">
-        <span class="text-muted"
-          >Copyright © 2017 Sakshaat Choyikandi. All Rights Reserved.</span
+      <div class="container ">
+        <span class="text text-muted"
+          >Copyright © 2019 Sakshaat Choyikandi. All Rights Reserved.</span
         >
       </div>
     </footer>
