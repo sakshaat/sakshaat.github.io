@@ -13,11 +13,14 @@ body {
 .jumbotron {
   padding-top: 20px !important;
   padding-bottom: 20px !important;
+  margin-bottom: 15px !important;
 }
 
 .content > div {
   height: 100%;
 }
+
+/* links */
 
 /* about */
 #about-content > .pull-left {
@@ -35,5 +38,5 @@ body {
 
 /* education */
 #uoft-logo {
-  max-height: 100%;
+  max-height: 80%;
 } 

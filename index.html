@@ -52,19 +52,49 @@
         </div>
       </div>
       <div>
-        <section class="p-2 container">
-          <span class="links">
-            <a href="#about-content">About</a> |
-            <a href="#education-content">Education</a> |
-            <a href="#work-content">Work Experience</a> |
-            <a href="#projects-content">Projects</a>
-          </span>
+        <section class="container">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-controls="about"
+                aria-selected="true"
+                id="about-tab"
+                data-toggle="tab"
+                href="#about-content"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"                 
+              aria-controls="education"
+              aria-selected="true"
+              id="education-tab"
+              data-toggle="tab" href="#education-content">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" 
+              class="nav-link"                 
+              aria-controls="work"
+              aria-selected="true"
+              id="work-tab"
+              data-toggle="tab" href="#work-content">Work Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"
+              class="nav-link"                 
+              aria-controls="projects"
+              aria-selected="true"
+              id="projects-tab"
+              data-toggle="tab"  href="#projects-content">Projects</a>
+            </li>
+          </ul>
 
-          <section class="p-3 content">
-            <div id="about-content">
+          <section class="p-3 tab-content content">
+            <div class="tab-pane fade show active" id="about-content" role="tabpanel" aria-labelledby="about-tab">
               <h3>About</h3>
-              <div class="pull-left p-3">
-                <img src="assets/profile.jpg" id="profile"/>
+              <div class="pull-left p-3 col-12 col-sm-auto">
+                <img src="assets/profile.jpg" id="profile" />
               </div>
               <div class="">
                 <p>
@@ -119,12 +149,48 @@
                   >.
                 </p>
               </div>
+              <div class="pt-3">
+                <h5>Technical Skillset</h5>
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>Languages</td>
+                      <td>Python, Java, JavaScript, C#, C, Bash</td>
+                    </tr>
+                    <tr>
+                      <td>Web</td>
+                      <td>
+                        Node.js, React, GraphQL, REST, jQuery, CSS, Bootstrap,
+                        Flask
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tools</td>
+                      <td>
+                        GitHub, AWS, Azure, Heroku, Docker, CircleCI, Android
+                        SDK, Unity
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Database</td>
+                      <td>SQLite, MongoDB, PostgreSQL</td>
+                    </tr>
+                    <tr>
+                      <td>Design</td>
+                      <td>
+                        Adobe Photoshop, Adobe Premiere, Inkscape, GIMP, Final
+                        Cut Pro, 3DS Max
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div id="education-content">
+            <div class="tab-pane fade" id="education-content" role="tabpanel" aria-labelledby="education-tab">
               <h3>Education</h3>
               <div class="container">
                 <div class="row">
-                  <div class="col-lg-2 col-md-3 col-sm-4 col-8">
+                  <div class="mx-auto col-lg-2 col-md-4 col-sm-4 col-8">
                     <img
                       id="uoft-logo"
                       class="img-fluid"
@@ -193,7 +259,7 @@
               </div>
             </div>
 
-            <div id="work-content">
+            <div class="tab-pane fade" id="work-content" role="tabpanel" aria-labelledby="work-tab">
               <h3>
                 Work Experience
               </h3>
@@ -251,7 +317,7 @@
                 </div>
               </div>
             </div>
-            <div id="projects-content">
+            <div class="tab-pane fade" id="projects-content" role="tabpanel" aria-labelledby="projects-tab">
               <h3>Notable Projects</h3>
               <div class="row">
                 <div class="col-md-6">
