@@ -65,10 +65,18 @@ body {
   color: var(--text-color);
   margin-bottom: 0px;
   font-size: 2.2em !important;
+  display: block;
+  text-align: center;
 }
 
 .lead {
   font-size: 0.9em !important;
+  text-align: center;
+}
+
+.main-logos {
+  text-align: center;
+  display: block;
 }
 
 #about-content p {
@@ -156,6 +164,13 @@ footer .text {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  .main-title {
+    color: var(--text-color);
+    margin-top: 5px;
+    font-size: 3em !important;
+  }
+  
+  
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -163,6 +178,20 @@ footer .text {
   footer .text {
     font-size: 0.8em;
   }
+
+  .main-title {
+    text-align: left;
+  }
+
+  .lead {
+    font-size: 1.2em !important;
+    text-align: left;
+  }
+
+  .main-logos {
+    text-align: left;
+  }
+
 }
 
 /* Large devices (desktops, 992px and up) */
