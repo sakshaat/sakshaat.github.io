@@ -63,6 +63,12 @@ body {
 
 .main-title {
   color: var(--text-color);
+  margin-bottom: 0px;
+  font-size: 2.2em !important;
+}
+
+.lead {
+  font-size: 0.9em !important;
 }
 
 #about-content p {
@@ -98,9 +104,27 @@ h3 {
   font-weight: 100 !important;
 }
 
-/* links */
+#uoft-logo {
+  width: 100% \9;
+}
 
 /* about */
+
+#uoft-logo {
+  display: block;
+  max-width:100%;
+  width: auto;
+  height: 200px;
+  object-fit: contain;
+}
+
+#projects-content i {
+  transition: color 0.12s ease-in-out;
+}
+
+#projects-content i:hover {
+  color: var(--active-link-color) !important;
+}
 
 #about-content .skillset-div {
   font-weight: 200 !important;
