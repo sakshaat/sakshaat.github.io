@@ -1,0 +1,149 @@
+:root {
+  --white-color: #edeeef;
+  --link-color: #1663ab;
+  --active-link-color: #df2935;
+  --text-color: #444545;
+  --secondary-color: #145c9e;
+  --light-secondary-color: #1663ab;
+}
+
+* {
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 200 !important;
+  color: var(--secondary-color);
+}
+
+h5 > i {
+  color: var(--secondary-color);
+}
+
+#myTab a {
+  color: var(--secondary-color) !important;
+  font-weight: 200 !important;
+}
+
+#myTab a:hover {
+  color: var(--active-link-color) !important;
+}
+
+a {
+  color: var(--link-color) !important;
+  transition: color 0.12s ease-in-out, font-weight 0.05s ease-in-out;
+  font-weight: 250;
+}
+
+a:hover {
+  color: var(--active-link-color) !important;
+  text-decoration-line: none !important;
+}
+
+header a > i {
+  transition: color 0.12s ease-in-out;
+}
+
+header a > i:hover {
+  color: var(--secondary-color) !important;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--white-color);
+  overflow-x: hidden;
+}
+
+.main-title {
+  color: var(--text-color);
+}
+
+#about-content p {
+  font-weight: 200 !important;
+}
+
+h3 {
+  font-size: 2em !important;
+}
+
+#about-content h5 {
+  font-size: 1.3em !important;
+}
+
+.content {
+  min-height: 50vh;
+  width: 100%;
+}
+
+.jumbotron {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  margin-bottom: 15px !important;
+  background-color: #edeeef;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23145c9e' fill-opacity='0.04'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.content > div {
+  height: 100%;
+}
+
+.content li {
+  font-weight: 100 !important;
+}
+
+/* links */
+
+/* about */
+
+#about-content .skillset-div {
+  font-weight: 200 !important;
+}
+
+#about-content > .pull-left {
+  float: left;
+}
+
+#about-content > .pull-right {
+  float: right;
+}
+
+#about-content #profile {
+  border-radius: 100%;
+  display: block;
+  width: auto;
+  max-width: 200px;
+}
+
+footer .text {
+  font-size: 0.7em;
+}
+
+/* projects */
+#projects-content .row span {
+  font-weight: 200;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  footer .text {
+    font-size: 0.8em;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #about-content #profile {
+    max-width: 170px;
+  }
+}
